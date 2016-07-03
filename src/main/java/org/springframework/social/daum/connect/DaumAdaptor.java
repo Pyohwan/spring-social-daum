@@ -36,7 +36,7 @@ public class DaumAdaptor implements ApiAdapter<Daum> {
     public UserProfile fetchUserProfile(Daum daum) {
         DaumProfile profile = daum.profileOperation().getProfile();
 
-        return (new UserProfileBuilder()).setUsername(profile.getUserId()).build();
+        return (new UserProfileBuilder()).setUsername(profile.getDaumName()).build();
     }
 
     @Override
